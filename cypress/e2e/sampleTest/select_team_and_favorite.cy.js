@@ -10,7 +10,7 @@ describe('Forms', () => {
 	cy.get('.MuiInputBase-input').eq(1).type('zujutest+automation@gmail.com')
 	cy.get('.MuiInputBase-input').eq(2).type('TestAuto123')
 	cy.get('.MuiButton-root').eq(1).click()
-	cy.get('.MuiInputBase-input').should('have.attr', 'placeholder', 'Search for a team')
+	cy.get('.MuiInputBase-input').eq(0).should('have.attr', 'placeholder', 'Search for a team')
 	cy.get('.MuiInputBase-input').eq(0).type('Manchester City')
 	cy.get('.MuiInputBase-input').should('have.value', 'Manchester City')
 	cy.get('.MuiBox-root').contains('Manchester City').click()
